@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwnq0nsddmd8c"
-path="res://.godot/imported/transition_up_right.png-dd01b8618291a0927552b2ad71fa4055.ctex"
+uid="uid://cgf3yv30mjdo3"
+path="res://.godot/imported/witch_house.png-b87925665f7782e275c9f2d156e4de7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel_art/transition_up_right.png"
-dest_files=["res://.godot/imported/transition_up_right.png-dd01b8618291a0927552b2ad71fa4055.ctex"]
+source_file="res://assets/pixel_art/witch_house.png"
+dest_files=["res://.godot/imported/witch_house.png-b87925665f7782e275c9f2d156e4de7c.ctex"]
 
 [params]
 

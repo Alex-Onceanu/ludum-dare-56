@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yrl6tlvnfbo5"
-path="res://.godot/imported/grass6.png-5d4cb7737498765a7fd771b702cc6256.ctex"
+uid="uid://w74xgx6ndu2"
+path="res://.godot/imported/roof.png-568fe36bea7993fd96f288c09c83577c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel_art/grass6.png"
-dest_files=["res://.godot/imported/grass6.png-5d4cb7737498765a7fd771b702cc6256.ctex"]
+source_file="res://assets/pixel_art/roof.png"
+dest_files=["res://.godot/imported/roof.png-568fe36bea7993fd96f288c09c83577c.ctex"]
 
 [params]
 

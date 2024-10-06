@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x5j3trjilj1e"
-path="res://.godot/imported/transition_outside_up.png-7e0c8bad27028cd2bb89ba8674148cb8.ctex"
+uid="uid://dkc7awq08qarm"
+path="res://.godot/imported/ground_tilemap.png-5e499d0f0489d7cb622827aa26ddc58a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel_art/transition_outside_up.png"
-dest_files=["res://.godot/imported/transition_outside_up.png-7e0c8bad27028cd2bb89ba8674148cb8.ctex"]
+source_file="res://assets/pixel_art/ground_tilemap.png"
+dest_files=["res://.godot/imported/ground_tilemap.png-5e499d0f0489d7cb622827aa26ddc58a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3nuj5qm0xgfk"
-path="res://.godot/imported/road_up_right.png-d0918a2edb63d5bc036065182b5c1b48.ctex"
+uid="uid://c0pqis76u3jut"
+path="res://.godot/imported/roof_witch.png-dad83d2ad44ad0acfbfcc7ab6fdc7479.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel_art/road_up_right.png"
-dest_files=["res://.godot/imported/road_up_right.png-d0918a2edb63d5bc036065182b5c1b48.ctex"]
+source_file="res://assets/pixel_art/roof_witch.png"
+dest_files=["res://.godot/imported/roof_witch.png-dad83d2ad44ad0acfbfcc7ab6fdc7479.ctex"]
 
 [params]
 

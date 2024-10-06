@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh4pnv5u3jkoy"
-path="res://.godot/imported/transition_outside_left.png-c9e8787ffeb6a3b98be6352de072894c.ctex"
+uid="uid://b7cqmev0fyllf"
+path="res://.godot/imported/wood_house.png-9e97168f32484f1a8e69ad109fcecd41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pixel_art/transition_outside_left.png"
-dest_files=["res://.godot/imported/transition_outside_left.png-c9e8787ffeb6a3b98be6352de072894c.ctex"]
+source_file="res://assets/pixel_art/wood_house.png"
+dest_files=["res://.godot/imported/wood_house.png-9e97168f32484f1a8e69ad109fcecd41.ctex"]
 
 [params]
 
