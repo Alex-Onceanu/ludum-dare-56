@@ -1,15 +1,15 @@
 extends Node2D
 
-@onready var village_scene = preload("res://scenes/village/village.tscn")
-#@onready var collection_scene = preload("res://scenes/village/collection.tscn")
-#@onready var tower_scene = preload("res://scenes/village/tower.tscn")
-#@onready var tournament_scene = preload("res://scenes/village/tournament.tscn")
-#@onready var options_scene = preload("res://scenes/options.tscn")
+
+@onready var current_scene = $village
+@onready var possessed_figurines = []
+
 
 func _on_collection_pressed() -> void:
-	pass
-	#get_tree().change_scene_to_packed(collection_scene)
-	
+	current_scene.hide()
+	current_scene = $collection
+	current_scene.show()
+		
 func _on_tower_pressed() -> void:
 	pass
 	
