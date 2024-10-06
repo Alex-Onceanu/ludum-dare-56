@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=4 uid="uid://cjfttib63jxka"]
+[gd_scene load_steps=19 format=4 uid="uid://cjfttib63jxka"]
 
-[ext_resource type="Texture2D" uid="uid://dkc7awq08qarm" path="res://assets/pixel_art/ground_tilemap.png" id="1_mxpgv"]
-[ext_resource type="Texture2D" uid="uid://cgf3yv30mjdo3" path="res://assets/pixel_art/witch_house.png" id="2_odi2d"]
-[ext_resource type="Texture2D" uid="uid://b7cqmev0fyllf" path="res://assets/pixel_art/wood_house.png" id="3_1p164"]
-[ext_resource type="Texture2D" uid="uid://w74xgx6ndu2" path="res://assets/pixel_art/roof.png" id="4_4f6dn"]
-[ext_resource type="Texture2D" uid="uid://c0pqis76u3jut" path="res://assets/pixel_art/roof_witch.png" id="5_5dl2x"]
+[ext_resource type="Texture2D" uid="uid://b668vi83f0e8l" path="res://assets/pixel_art/ground_tilemap.png" id="1_mxpgv"]
+[ext_resource type="Texture2D" uid="uid://dnrwnpsie2re5" path="res://assets/pixel_art/witch_house.png" id="2_odi2d"]
+[ext_resource type="Texture2D" uid="uid://5hm2cseg0q01" path="res://assets/pixel_art/wood_house.png" id="3_1p164"]
+[ext_resource type="Texture2D" uid="uid://b41klbbfrw8f2" path="res://assets/pixel_art/roof.png" id="4_4f6dn"]
+[ext_resource type="Texture2D" uid="uid://cwctjh3mgvejg" path="res://assets/pixel_art/roof_witch.png" id="5_5dl2x"]
+[ext_resource type="FontFile" uid="uid://rsiuyc071mp7" path="res://assets/HappyHalloween.ttf" id="6_bcr5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teetx"]
 texture = ExtResource("1_mxpgv")
@@ -396,6 +397,25 @@ sources/1 = SubResource("TileSetAtlasSource_ocppu")
 sources/2 = SubResource("TileSetAtlasSource_dofe8")
 sources/3 = SubResource("TileSetAtlasSource_0bxu3")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qlc4w"]
+bg_color = Color(0.976471, 0.45098, 0, 1)
+border_width_bottom = 5
+border_color = Color(0.321569, 0.298039, 0.258824, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+anti_aliasing_size = 0.625
+
+[sub_resource type="Theme" id="Theme_qeo2n"]
+default_font = ExtResource("6_bcr5d")
+default_font_size = 16
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_qlc4w")
+
 [node name="Village" type="Node2D"]
 position = Vector2(51, 62)
 
@@ -465,3 +485,35 @@ tile_set = SubResource("TileSet_tjhn3")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAASAAEAAAACAAIAAAARAAEAAAAAAAIAAAA=")
 tile_set = SubResource("TileSet_tjhn3")
+
+[node name="collection" type="Button" parent="."]
+offset_left = 814.0
+offset_top = 169.0
+offset_right = 916.0
+offset_bottom = 200.0
+theme = SubResource("Theme_qeo2n")
+text = "Collection"
+
+[node name="tower" type="Button" parent="."]
+offset_left = 231.0
+offset_top = 176.0
+offset_right = 333.0
+offset_bottom = 207.0
+theme = SubResource("Theme_qeo2n")
+text = "The Tower"
+
+[node name="tournament" type="Button" parent="."]
+offset_left = 524.0
+offset_top = 77.0
+offset_right = 626.0
+offset_bottom = 108.0
+theme = SubResource("Theme_qeo2n")
+text = "Tournament"
+
+[node name="options" type="Button" parent="."]
+offset_left = 537.0
+offset_top = 285.0
+offset_right = 613.0
+offset_bottom = 315.0
+theme = SubResource("Theme_qeo2n")
+text = "Options"

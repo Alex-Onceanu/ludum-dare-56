@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://7t4clmauqkb5"]
+[gd_scene load_steps=3 format=3 uid="uid://7t4clmauqkb5"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_nqcxk"]
+[ext_resource type="PackedScene" uid="uid://cjfttib63jxka" path="res://scenes/village/village.tscn" id="2_mvive"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_nqcxk")
+
+[node name="village" parent="." instance=ExtResource("2_mvive")]
+position = Vector2(-1, 0)
