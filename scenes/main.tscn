@@ -11,3 +11,4 @@ script = ExtResource("1_nqcxk")
 position = Vector2(-6, -15)
 
 [node name="collection" parent="." instance=ExtResource("3_6q2yv")]
+visible = false
