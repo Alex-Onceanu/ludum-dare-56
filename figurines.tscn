@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bby78u3ud6ond"]
+
+[node name="figurines" type="Node2D"]
+
+[node name="tête" type="Sprite2D" parent="."]
+
+[node name="corps" type="Sprite2D" parent="."]
+
+[node name="jambes" type="Sprite2D" parent="."]
