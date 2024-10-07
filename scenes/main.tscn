@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://7t4clmauqkb5"]
+[gd_scene load_steps=5 format=3 uid="uid://7t4clmauqkb5"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_nqcxk"]
 [ext_resource type="PackedScene" uid="uid://cjfttib63jxka" path="res://scenes/village/village.tscn" id="2_mvive"]
 [ext_resource type="PackedScene" uid="uid://cwypbc1qlaq1c" path="res://scenes/village/collection.tscn" id="3_6q2yv"]
+[ext_resource type="PackedScene" uid="uid://bholw7u5e0fys" path="res://scenes/village/tournament.tscn" id="4_t8wv7"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nqcxk")
@@ -12,4 +13,7 @@ position = Vector2(-6, -15)
 metadata/_edit_group_ = true
 
 [node name="collection" parent="." instance=ExtResource("3_6q2yv")]
+visible = false
+
+[node name="tournament" parent="." instance=ExtResource("4_t8wv7")]
 visible = false

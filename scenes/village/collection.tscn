@@ -165,7 +165,7 @@ tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_228r8")
 sources/1 = SubResource("TileSetAtlasSource_ihw2n")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6r31"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqful"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -177,7 +177,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqdan"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wkro"]
 bg_color = Color(0.976471, 0.45098, 0, 1)
 border_width_bottom = 5
 border_color = Color(0.321569, 0.298039, 0.258824, 1)
@@ -190,7 +190,7 @@ shadow_size = 3
 shadow_offset = Vector2(1, 1)
 anti_aliasing_size = 0.625
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n6hw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywvoa"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -205,9 +205,9 @@ corner_detail = 5
 [sub_resource type="Theme" id="Theme_lww1l"]
 default_font = ExtResource("4_g5ied")
 default_font_size = 32
-Button/styles/hover = SubResource("StyleBoxFlat_a6r31")
-Button/styles/normal = SubResource("StyleBoxFlat_lqdan")
-Button/styles/pressed = SubResource("StyleBoxFlat_6n6hw")
+Button/styles/hover = SubResource("StyleBoxFlat_tqful")
+Button/styles/normal = SubResource("StyleBoxFlat_8wkro")
+Button/styles/pressed = SubResource("StyleBoxFlat_ywvoa")
 
 [node name="collection" type="Node2D"]
 script = ExtResource("1_o708g")
@@ -226,8 +226,8 @@ icon_scale = 3.0
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 886.0
 offset_top = 143.0
-offset_right = 1136.0
-offset_bottom = 633.0
+offset_right = 1128.0
+offset_bottom = 545.0
 color = Color(0.976471, 0.45098, 0, 0.14902)
 
 [node name="house" type="Node2D" parent="."]
