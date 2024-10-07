@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bsflqe3xdhx18"]
+[gd_scene load_steps=27 format=4 uid="uid://bsflqe3xdhx18"]
 
 [ext_resource type="Script" path="res://scenes/combat/combat.gd" id="1_3v6cc"]
 [ext_resource type="Texture2D" uid="uid://b3yth734foqop" path="res://assets/pixel_art/black.png" id="1_kax5r"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c7t4lm5l7mwdg" path="res://assets/pixel_art/board_part_right.png" id="10_pk2xx"]
 [ext_resource type="Texture2D" uid="uid://dhas0y7aao0n3" path="res://assets/pixel_art/board_angle_left.png" id="11_n88nh"]
 [ext_resource type="Texture2D" uid="uid://rdrrfh6hwxju" path="res://assets/pixel_art/highlight.png" id="13_wc41r"]
+[ext_resource type="FontFile" uid="uid://cawhsspxpbwa5" path="res://HappyHalloween.ttf" id="14_acw1b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uq2u8"]
 texture = ExtResource("1_kax5r")
@@ -131,9 +132,21 @@ texture = ExtResource("13_wc41r")
 [node name="highlight5" type="Sprite2D" parent="."]
 texture = ExtResource("13_wc41r")
 
-[node name="Button" type="Button" parent="."]
+[node name="attack" type="Button" parent="."]
 offset_left = -115.0
 offset_top = 177.0
 offset_right = 138.0
 offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("14_acw1b")
 text = "Attack"
+
+[node name="move" type="Button" parent="."]
+offset_left = 282.0
+offset_top = 177.0
+offset_right = 535.0
+offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("14_acw1b")
+text = "Move"
+
+[connection signal="pressed" from="attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="move" to="." method="_on_move_pressed"]
