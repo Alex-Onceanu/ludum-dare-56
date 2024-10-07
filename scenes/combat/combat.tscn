@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://bsflqe3xdhx18"]
+[gd_scene load_steps=26 format=4 uid="uid://bsflqe3xdhx18"]
 
 [ext_resource type="Script" path="res://scenes/combat/combat.gd" id="1_3v6cc"]
 [ext_resource type="Texture2D" uid="uid://b3yth734foqop" path="res://assets/pixel_art/black.png" id="1_kax5r"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://drpd3rhw06sh3" path="res://assets/pixel_art/board_part_left.png" id="9_7jhgv"]
 [ext_resource type="Texture2D" uid="uid://c7t4lm5l7mwdg" path="res://assets/pixel_art/board_part_right.png" id="10_pk2xx"]
 [ext_resource type="Texture2D" uid="uid://dhas0y7aao0n3" path="res://assets/pixel_art/board_angle_left.png" id="11_n88nh"]
+[ext_resource type="Texture2D" uid="uid://rdrrfh6hwxju" path="res://assets/pixel_art/highlight.png" id="13_wc41r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uq2u8"]
 texture = ExtResource("1_kax5r")
@@ -114,3 +115,25 @@ z_as_relative = false
 scale = Vector2(1.52, 1.52)
 tile_map_data = PackedByteArray("AAAIAAEABgAAAAAAAAAHAAEABwAAAAAAAAAGAAEABwAAAAAAAAAFAAEABwAAAAAAAAAEAAEABwAAAAAAAAADAAEABwAAAAAAAAACAAEABwAAAAAAAAABAAEABwAAAAAAAAAAAAEABwAAAAAAAAD///j/AwAAAAAAAAD///n/BAAAAAAAAAD///r/BAAAAAAAAAD///v/BAAAAAAAAAD///z/BAAAAAAAAAD///3/BAAAAAAAAAD///7/BAAAAAAAAAD/////BAAAAAAAAAD//wAABAAAAAAAAAAAAPj/BQAAAAAAAAABAPj/BQAAAAAAAAACAPj/BQAAAAAAAAADAPj/BQAAAAAAAAAEAPj/BQAAAAAAAAAFAPj/BQAAAAAAAAAGAPj/BQAAAAAAAAAHAPj/BQAAAAAAAAAIAPn/CAAAAAAAAAAIAPr/CAAAAAAAAAAIAPv/CAAAAAAAAAAIAPz/CAAAAAAAAAAIAP3/CAAAAAAAAAAIAP7/CAAAAAAAAAAIAP//CAAAAAAAAAAIAAAACAAAAAAAAAD//wEACQAAAAAAAAAIAPj/CgAAAAAAAAAAAPn/AAAAAAAAAAABAPr/AAAAAAAAAAACAPv/AAAAAAAAAAADAPz/AAAAAAAAAAAEAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP//AAAAAAAAAAAHAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAP//AAAAAAAAAAADAP7/AAAAAAAAAAACAP3/AAAAAAAAAAABAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP7/AAAAAAAAAAACAP//AAAAAAAAAAADAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAP//AAAAAAAAAAACAPn/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAPv/AAAAAAAAAAAEAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAP7/AAAAAAAAAAAAAP7/AgAAAAAAAAAAAAAAAgAAAAAAAAABAP//AgAAAAAAAAAAAPz/AgAAAAAAAAABAP3/AgAAAAAAAAACAP7/AgAAAAAAAAADAP//AgAAAAAAAAACAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAAAPr/AgAAAAAAAAABAPv/AgAAAAAAAAACAPz/AgAAAAAAAAADAP3/AgAAAAAAAAAEAP7/AgAAAAAAAAAFAP//AgAAAAAAAAAGAAAAAgAAAAAAAAAHAP//AgAAAAAAAAAGAP7/AgAAAAAAAAAFAP3/AgAAAAAAAAAEAPz/AgAAAAAAAAADAPv/AgAAAAAAAAACAPr/AgAAAAAAAAABAPn/AgAAAAAAAAADAPn/AgAAAAAAAAAEAPr/AgAAAAAAAAAFAPv/AgAAAAAAAAAGAPz/AgAAAAAAAAAHAP3/AgAAAAAAAAAHAPv/AgAAAAAAAAAGAPr/AgAAAAAAAAAFAPn/AgAAAAAAAAAHAPn/AgAAAAAAAAAFAPr/AAAAAAAAAAAHAPz/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_juptc")
+
+[node name="highlight1" type="Sprite2D" parent="."]
+texture = ExtResource("13_wc41r")
+
+[node name="highlight2" type="Sprite2D" parent="."]
+texture = ExtResource("13_wc41r")
+
+[node name="highlight3" type="Sprite2D" parent="."]
+texture = ExtResource("13_wc41r")
+
+[node name="highlight4" type="Sprite2D" parent="."]
+texture = ExtResource("13_wc41r")
+
+[node name="highlight5" type="Sprite2D" parent="."]
+texture = ExtResource("13_wc41r")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -115.0
+offset_top = 177.0
+offset_right = 138.0
+offset_bottom = 209.0
+text = "Attack"
