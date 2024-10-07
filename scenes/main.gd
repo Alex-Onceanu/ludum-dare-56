@@ -3,8 +3,8 @@ extends Node2D
 @onready var possessed_figurines = []
 const team_size = 6
 @onready var team = []
-
 @onready var selected_scene = $village
+@onready var combat_blueprint = preload("res://scenes/combat/combat.tscn")
 
 func _on_collection_pressed() -> void:
 	$village.hide()
@@ -40,11 +40,18 @@ func _on_team_pressed() -> void:
 	get_node("collection/team_view/" + str($collection.curr_team_i + 1)).texture = $collection.get_node("selected").texture
 	$collection.curr_team_i = ($collection.curr_team_i + 1) % team_size
 
+func _on_combat_end_battle(win):
+	pass
+
 func start_battle():
 	if team.size() <= 0:
 		return
 	else:
-		pass
+		var combat_scene = combat_blueprint.instantiate()
+		combat_scene.set_ingame_pieces(team, $tournament.enemies_per_level[$tournament.current_level])
+		combat_scene.end_battle.connect(_on_combat_end_battle)
+		add_child(combat_scene)
+		
 
 func _ready() -> void:
 	$collection.hide()

@@ -14,6 +14,8 @@ const healths = [6, 4, 8]
 const dmg_stats = [4, 5, 3]
 const movements = [[Vector2(0.0, 1.0), Vector2(0.0, -1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(0.0, 2.0)]]
 const attacks = [[Vector2(0.0, 1.0), Vector2(-1.0, 2.0), Vector2(1.0, 2.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(-1.0, 1.0)]]
+const opp_movements = [[-Vector2(0.0, 1.0), -Vector2(0.0, -1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(0.0, 2.0)]]
+const opp_attacks = [[-Vector2(0.0, 1.0), -Vector2(-1.0, 2.0), -Vector2(1.0, 2.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(-1.0, 1.0)]]
 
 @onready var health = 0
 @onready var dmg_stat = 0
@@ -31,10 +33,11 @@ func create_figurine(id_bot, id_mid, id_top, is_enemy):
 	nickname = names_top[id_top] + names_mid[id_mid] + names_bot[id_bot]
 	health = healths[id_top]
 	dmg_stat = dmg_stats[id_top]
-	attack = attacks[id_mid]
-	movement = movements[id_bot]
 	
 	if is_enemy:
 		get_node("sprite").flip_h = true
-		#for i in range(0, attack.size()):
-		#	attack[i] = -attack[i]
+		attack = opp_attacks[id_mid]
+		movement = opp_movements[id_mid]
+	else:
+		attack = attacks[id_mid]
+		movement = movements[id_bot]

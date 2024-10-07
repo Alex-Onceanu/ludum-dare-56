@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var fig_blueprint = preload("res://scenes/figurine.tscn")
-@onready var current_level = 1
+@onready var current_level = 0
 @onready var enemies_per_level = []
 const nb_enemies_per_level = [3, 5, 6, 6, 6]
 
@@ -21,9 +21,9 @@ func _ready():
 		
 
 func update():
-	$div/enemy_img.texture = enemies_per_level[current_level - 1][0].get_node("sprite").texture
-	$div/level_nb.text = "Level " + str(current_level)
-	$div/enemy_nb.text = "* " + str(nb_enemies_per_level[current_level - 1])
+	$div/enemy_img.texture = enemies_per_level[current_level][0].get_node("sprite").texture
+	$div/level_nb.text = "Level " + str(current_level + 1)
+	$div/enemy_nb.text = "* " + str(nb_enemies_per_level[current_level])
 	$team_size.text = "You have " + str(get_parent().team.size())
 	
 	if get_parent().team.size() > 1:
