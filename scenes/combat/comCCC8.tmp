@@ -121,7 +121,6 @@ offset_right = -50.0
 offset_bottom = 250.0
 
 [node name="test" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("13_yqorx")
 
 [connection signal="item_selected" from="list" to="." method="draw"]
