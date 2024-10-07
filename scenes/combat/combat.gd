@@ -51,7 +51,6 @@ func set_ingame_pieces(__player_pieces, __enemy_pieces):
 	enemy_pieces = __enemy_pieces
 
 func _ready():
-	$list.add_item("test", $test.get_texture(), true)
 	for i in range(len(player_pieces)):
 		$list.add_item(player_pieces[i].get_node("figurine").nickname, player_pieces[i].get_node("sprite").sprite, true)
 	for i in range(len(enemy_pieces)): #on suppose len(enemy_pieces) <= 8 et len(player_pieces) <= 8
