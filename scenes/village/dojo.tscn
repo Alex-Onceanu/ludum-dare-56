@@ -1,0 +1,157 @@
+[gd_scene load_steps=14 format=4 uid="uid://dj6cmioe1n32d"]
+
+[ext_resource type="Texture2D" uid="uid://dmovpodcvb31q" path="res://assets/pixel_art/interior.png" id="1_6vp6v"]
+[ext_resource type="Script" path="res://scenes/village/dojo.gd" id="1_sn8ng"]
+[ext_resource type="FontFile" uid="uid://bbboar44j52e8" path="res://assets/HappyHalloween.ttf" id="2_lf6q2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7f2if"]
+texture = ExtResource("1_6vp6v")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -8)
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dtrmb"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_7f2if")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obur7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbrcg"]
+bg_color = Color(0.976471, 0.45098, 0, 1)
+border_width_bottom = 5
+border_color = Color(0.321569, 0.298039, 0.258824, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+anti_aliasing_size = 0.625
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2dg4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_1na0b"]
+default_font = ExtResource("2_lf6q2")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxFlat_obur7")
+Button/styles/normal = SubResource("StyleBoxFlat_mbrcg")
+Button/styles/pressed = SubResource("StyleBoxFlat_p2dg4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp4we"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svyb2"]
+bg_color = Color(0.976471, 0.45098, 0, 1)
+border_width_bottom = 5
+border_color = Color(0.321569, 0.298039, 0.258824, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+anti_aliasing_size = 0.625
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0qb6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_g7ml5"]
+default_font = ExtResource("2_lf6q2")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxFlat_wp4we")
+Button/styles/normal = SubResource("StyleBoxFlat_svyb2")
+Button/styles/pressed = SubResource("StyleBoxFlat_s0qb6")
+
+[node name="dojo" type="Node2D"]
+position = Vector2(-422, -169)
+script = ExtResource("1_sn8ng")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(1.5, 1.5)
+tile_map_data = PackedByteArray("AAArAPb/AAAAAAAAAAArAPf/AAAAAAAAAAArAPj/AAAAAAAAAAArAPn/AAAAAAAAAAArAPr/AAAAAAAAAAArAPv/AAAAAAAAAAArAPz/AAAAAAAAAAArAP3/AAAAAAAAAAArAP7/AAAAAAAAAAAsAPb/AAAAAAAAAAAsAPf/AAAAAAAAAAAsAPj/AAAAAAAAAAAsAPn/AAAAAAAAAAAsAPr/AAAAAAAAAAAsAPv/AAAAAAAAAAAsAPz/AAAAAAAAAAAsAP3/AAAAAAAAAAAsAP7/AAAAAAAAAAAtAPb/AAAAAAAAAAAtAPf/AAAAAAAAAAAtAPj/AAAAAAAAAAAtAPn/AAAAAAAAAAAtAPr/AAAAAAAAAAAtAPv/AAAAAAAAAAAtAPz/AAAAAAAAAAAtAP3/AAAAAAAAAAAtAP7/AAAAAAAAAAAuAPb/AAAAAAAAAAAuAPf/AAAAAAAAAAAuAPj/AAAAAAAAAAAuAPn/AAAAAAAAAAAuAPr/AAAAAAAAAAAuAPv/AAAAAAAAAAAuAPz/AAAAAAAAAAAuAP3/AAAAAAAAAAAuAP7/AAAAAAAAAAAvAPb/AAAAAAAAAAAvAPf/AAAAAAAAAAAvAPj/AAAAAAAAAAAvAPn/AAAAAAAAAAAvAPr/AAAAAAAAAAAvAPv/AAAAAAAAAAAvAPz/AAAAAAAAAAAvAP3/AAAAAAAAAAAvAP7/AAAAAAAAAAAwAPb/AAAAAAAAAAAwAPf/AAAAAAAAAAAwAPj/AAAAAAAAAAAwAPn/AAAAAAAAAAAwAPr/AAAAAAAAAAAwAPv/AAAAAAAAAAAwAPz/AAAAAAAAAAAwAP3/AAAAAAAAAAAwAP7/AAAAAAAAAAAxAPb/AAAAAAAAAAAxAPf/AAAAAAAAAAAxAPj/AAAAAAAAAAAxAPn/AAAAAAAAAAAxAPr/AAAAAAAAAAAxAPv/AAAAAAAAAAAxAPz/AAAAAAAAAAAxAP3/AAAAAAAAAAAxAP7/AAAAAAAAAAAyAPb/AAAAAAAAAAAyAPf/AAAAAAAAAAAyAPj/AAAAAAAAAAAyAPn/AAAAAAAAAAAyAPr/AAAAAAAAAAAyAPv/AAAAAAAAAAAyAPz/AAAAAAAAAAAyAP3/AAAAAAAAAAAyAP7/AAAAAAAAAAAzAPb/AAAAAAAAAAAzAPf/AAAAAAAAAAAzAPj/AAAAAAAAAAAzAPn/AAAAAAAAAAAzAPr/AAAAAAAAAAAzAPv/AAAAAAAAAAAzAPz/AAAAAAAAAAAzAP3/AAAAAAAAAAAzAP7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_dtrmb")
+
+[node name="exit" type="Button" parent="."]
+offset_left = 455.0
+offset_top = 194.0
+offset_right = 549.0
+offset_bottom = 242.0
+theme = SubResource("Theme_1na0b")
+text = "EXIT"
+
+[node name="team_size" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 755.0
+offset_right = 888.0
+offset_bottom = 801.0
+theme_override_fonts/font = ExtResource("2_lf6q2")
+theme_override_font_sizes/font_size = 32
+
+[node name="play" type="Button" parent="."]
+offset_left = 579.0
+offset_top = 437.0
+offset_right = 837.0
+offset_bottom = 529.0
+theme = SubResource("Theme_g7ml5")
+text = "Farm 5 wishes"

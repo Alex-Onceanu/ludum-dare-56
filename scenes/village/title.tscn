@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpvg0qusf3x50"]
+
+[ext_resource type="FontFile" uid="uid://bbboar44j52e8" path="res://assets/HappyHalloween.ttf" id="1_hpk4d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6r31"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lqdan"]
+bg_color = Color(0.976471, 0.45098, 0, 1)
+border_width_bottom = 5
+border_color = Color(0.321569, 0.298039, 0.258824, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 3
+shadow_offset = Vector2(1, 1)
+anti_aliasing_size = 0.625
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n6hw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_ysgt6"]
+default_font = ExtResource("1_hpk4d")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxFlat_a6r31")
+Button/styles/normal = SubResource("StyleBoxFlat_lqdan")
+Button/styles/pressed = SubResource("StyleBoxFlat_6n6hw")
+
+[node name="title" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -31.0
+offset_top = -27.0
+offset_right = 1186.0
+offset_bottom = 676.0
+color = Color(0.976471, 0.45098, 0, 0.709804)
+
+[node name="exit" type="Button" parent="."]
+offset_left = 437.0
+offset_top = 385.0
+offset_right = 692.0
+offset_bottom = 515.0
+theme = SubResource("Theme_ysgt6")
+theme_override_font_sizes/font_size = 96
+text = "PLAY"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 101.0
+offset_right = 1047.0
+offset_bottom = 246.0
+theme_override_fonts/font = ExtResource("1_hpk4d")
+theme_override_font_sizes/font_size = 128
+text = "Figurine enjoyer"

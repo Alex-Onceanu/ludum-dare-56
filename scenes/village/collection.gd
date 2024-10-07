@@ -7,6 +7,7 @@ extends Node2D
 @onready var selected_fig_id = null
 @onready var anim_elapsed_time = 0.0
 const anim_total = 0.5
+@onready var nb_coins = 3
 
 @onready var curr_team_i = 0
 
@@ -16,8 +17,10 @@ func reset_anim():
 	$selected.position = Vector2i(282, -100)
 
 func _on_gambling_pressed():
+	if nb_coins <= 0:
+		return
 	var new_fig = fig_blueprint.instantiate()
-	new_fig.create_figurine(rng.randi_range(0, 2), rng.randi_range(0, 2), rng.randi_range(0, 2), false)
+	new_fig.create_figurine(rng.randi_range(0, 3), rng.randi_range(0, 3), rng.randi_range(0, 3), false)
 	get_parent().possessed_figurines.push_back(new_fig)
 	
 	$figurine_list.add_item(new_fig.nickname, new_fig.get_node("sprite").texture, true)
@@ -25,8 +28,12 @@ func _on_gambling_pressed():
 	$selected.texture = new_fig.get_node("sprite").texture
 	selected_fig_id = get_parent().possessed_figurines.size() - 1
 	
+	nb_coins -= 1
+	$coins.text = "* " + str(nb_coins)
+	
 func _ready():
 	$selected.scale = Vector2i(3.0, 3.0)
+	$coins.text = "* " + str(nb_coins)
 	
 func _process(delta):
 	if selected_fig_id != null and anim_elapsed_time < anim_total:

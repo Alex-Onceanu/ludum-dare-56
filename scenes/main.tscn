@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://7t4clmauqkb5"]
+[gd_scene load_steps=8 format=3 uid="uid://7t4clmauqkb5"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_nqcxk"]
 [ext_resource type="PackedScene" uid="uid://cjfttib63jxka" path="res://scenes/village/village.tscn" id="2_mvive"]
 [ext_resource type="PackedScene" uid="uid://cwypbc1qlaq1c" path="res://scenes/village/collection.tscn" id="3_6q2yv"]
 [ext_resource type="PackedScene" uid="uid://bholw7u5e0fys" path="res://scenes/village/tournament.tscn" id="4_t8wv7"]
+[ext_resource type="PackedScene" uid="uid://dj6cmioe1n32d" path="res://scenes/village/dojo.tscn" id="5_h1ktm"]
+[ext_resource type="PackedScene" uid="uid://nco8t236juhy" path="res://scenes/village/options.tscn" id="6_dggvr"]
+[ext_resource type="PackedScene" uid="uid://cpvg0qusf3x50" path="res://scenes/village/title.tscn" id="7_jlfji"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nqcxk")
 
 [node name="village" parent="." instance=ExtResource("2_mvive")]
+visible = false
 position = Vector2(-6, -15)
 metadata/_edit_group_ = true
 
@@ -17,3 +21,11 @@ visible = false
 
 [node name="tournament" parent="." instance=ExtResource("4_t8wv7")]
 visible = false
+
+[node name="dojo" parent="." instance=ExtResource("5_h1ktm")]
+visible = false
+
+[node name="options" parent="." instance=ExtResource("6_dggvr")]
+visible = false
+
+[node name="title" parent="." instance=ExtResource("7_jlfji")]

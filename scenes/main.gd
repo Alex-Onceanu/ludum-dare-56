@@ -3,8 +3,10 @@ extends Node2D
 @onready var possessed_figurines = []
 const team_size = 6
 @onready var team = []
-@onready var selected_scene = $village
+@onready var selected_scene = $title
 @onready var combat_blueprint = preload("res://scenes/combat/combat.tscn")
+@onready var is_farming = false
+@onready var figurine_blueprint = preload("res://scenes/figurine.tscn")
 
 func _on_collection_pressed() -> void:
 	$village.hide()
@@ -19,10 +21,14 @@ func _on_tournament_pressed() -> void:
 	selected_scene = $tournament
 	
 func _on_options_pressed() -> void:
-	pass
+	$village.hide()
+	$options.show()
+	selected_scene = $options
 	
 func _on_dojo_pressed() -> void:
-	pass
+	$village.hide()
+	$dojo.show()
+	selected_scene = $dojo
 	
 func _on_exit_pressed() -> void:
 	selected_scene.hide()
@@ -41,23 +47,55 @@ func _on_team_pressed() -> void:
 	$collection.curr_team_i = ($collection.curr_team_i + 1) % team_size
 
 func _on_combat_end_battle(win):
-	pass
+	if win:
+		if is_farming:
+			$collection.nb_coins += 5
+		else:
+			$collection.nb_coins += 3
+		$"collection/coins".text = "* " + str($collection.nb_coins)
+		$tournament.current_level += 1
+	selected_scene.queue_free()
+	selected_scene = $village
+	selected_scene.show()
+	
 
 func start_battle():
 	if team.size() <= 0:
 		return
-	else:
-		var combat_scene = combat_blueprint.instantiate()
-		var team_figurines = []
-		for i in range(len(team)):
-			team_figurines.append(possessed_figurines[team[i]])
-		combat_scene.set_ingame_pieces(team_figurines, $tournament.enemies_per_level[$tournament.current_level])
-		combat_scene.end_battle.connect(_on_combat_end_battle)
-		combat_scene.show()
-		add_child(combat_scene)
-		$tournament.hide()
+	selected_scene = combat_blueprint.instantiate()
+	var team_figurines = []
+	for i in range(len(team)):
+		team_figurines.append(possessed_figurines[team[i]])
+	selected_scene.set_ingame_pieces(team_figurines, $tournament.enemies_per_level[$tournament.current_level])
+	selected_scene.end_battle.connect(_on_combat_end_battle)
+	add_child(selected_scene)
+	selected_scene.show()
+	$tournament.hide()
+	is_farming = false
 	
+func start_farm():
+	if team.size() <= 0:
+		return
+	selected_scene = combat_blueprint.instantiate()
+	
+	var team_figurines = []
+	for i in range(len(team)):
+		team_figurines.append(possessed_figurines[team[i]])
 		
+	var enemy_figurines = []
+	const nb_enemies_farm = 3
+	for j in range(nb_enemies_farm):
+		var e = figurine_blueprint.instantiate()
+		e.create_figurine($collection.rng.randi_range(0, 3), $collection.rng.randi_range(0, 3), $collection.rng.randi_range(0, 3), true)
+		enemy_figurines.push_back(e)
+		
+	selected_scene.set_ingame_pieces(team_figurines, enemy_figurines)
+	selected_scene.end_battle.connect(_on_combat_end_battle)
+	add_child(selected_scene)
+	selected_scene.show()
+	$dojo.hide()
+	is_farming = true
+	
 
 func _ready() -> void:
 	$collection.hide()
@@ -72,3 +110,9 @@ func _ready() -> void:
 	
 	$tournament/exit.pressed.connect(_on_exit_pressed)
 	$tournament/play.pressed.connect(start_battle)
+	
+	$dojo/exit.pressed.connect(_on_exit_pressed)
+	$dojo/play.pressed.connect(start_farm)
+	
+	$options/exit.pressed.connect(_on_exit_pressed)
+	$title/exit.pressed.connect(_on_exit_pressed)

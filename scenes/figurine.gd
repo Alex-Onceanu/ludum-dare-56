@@ -2,20 +2,20 @@ extends Node2D
 
 @onready var nickname = "unnamed"
 
-const bots = [preload("res://assets/figurines/pumpkin_bot.png"), preload("res://assets/figurines/skeleton_bot.png"), preload("res://assets/figurines/zombie_bot.png")]
-const mids = [preload("res://assets/figurines/pumpkin_mid.png"), preload("res://assets/figurines/skeleton_mid.png"), preload("res://assets/figurines/zombie_mid.png")]
-const tops = [preload("res://assets/figurines/pumpkin_top.png"), preload("res://assets/figurines/skeleton_top.png"), preload("res://assets/figurines/zombie_top.png")]
+const bots = [preload("res://assets/figurines/pumpkin_bot.png"), preload("res://assets/figurines/skeleton_bot.png"), preload("res://assets/figurines/zombie_bot.png"), preload("res://assets/figurines/cthulhu_bot.png")]
+const mids = [preload("res://assets/figurines/pumpkin_mid.png"), preload("res://assets/figurines/skeleton_mid.png"), preload("res://assets/figurines/zombie_mid.png"), preload("res://assets/figurines/cthulhu_mid.png")]
+const tops = [preload("res://assets/figurines/pumpkin_top.png"), preload("res://assets/figurines/skeleton_top.png"), preload("res://assets/figurines/zombie_top.png"), preload("res://assets/figurines/cthulhu_top.png")]
 
-const names_top = ["pu", "ske", "zo"]
-const names_mid = ["mp", "le", "mb"]
-const names_bot = ["kin", "ton", "ie"]
+const names_top = ["pu", "ske", "zo", "cth"]
+const names_mid = ["mp", "le", "mb", "ul"]
+const names_bot = ["kin", "ton", "ie", "hu"]
 
-const healths = [6, 4, 8]
-const dmg_stats = [4, 5, 3]
-const movements = [[Vector2(0.0, 1.0), Vector2(0.0, -1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(0.0, 2.0)]]
-const attacks = [[Vector2(0.0, 1.0), Vector2(-1.0, 2.0), Vector2(1.0, 2.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(-1.0, 1.0)]]
-const opp_movements = [[-Vector2(0.0, 1.0), -Vector2(0.0, -1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(0.0, 2.0)]]
-const opp_attacks = [[-Vector2(0.0, 1.0), -Vector2(-1.0, 2.0), -Vector2(1.0, 2.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(-1.0, 1.0)]]
+const healths = [6, 4, 8, 10]
+const dmg_stats = [4, 5, 3, 4]
+const movements = [[Vector2(0.0, 1.0), Vector2(0.0, -1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(0.0, 2.0)], [Vector2(1.0, 2.0), Vector2(-1.0, 2.0), Vector2(-2.0, 1.0), Vector2(-2.0, -1.0), Vector2(-1.0, -2.0), Vector2(1.0, -2.0), Vector2(2.0, -1.0)]]
+const attacks = [[Vector2(0.0, 1.0), Vector2(-1.0, 2.0), Vector2(1.0, 2.0)], [Vector2(0.0, 1.0), Vector2(1.0, 0.0), Vector2(-1.0, 0.0)], [Vector2(0.0, 1.0), Vector2(-1.0, 1.0)], [Vector2(0.0, 1.0), Vector2(-1.0, 1.0), Vector2(-1.0, 0.0), Vector2(-1.0, -1.0), Vector2(0.0, -1.0), Vector2(1.0, -1.0), Vector2(1.0, 0.0), Vector2(1.0, 1.0)]]
+const opp_movements = [[-Vector2(0.0, 1.0), -Vector2(0.0, -1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(0.0, 2.0)], [Vector2(1.0, 2.0), Vector2(-1.0, 2.0), Vector2(-2.0, 1.0), Vector2(-2.0, -1.0), Vector2(-1.0, -2.0), Vector2(1.0, -2.0), Vector2(2.0, -1.0)]]
+const opp_attacks = [[-Vector2(0.0, 1.0), -Vector2(-1.0, 2.0), -Vector2(1.0, 2.0)], [-Vector2(0.0, 1.0), -Vector2(1.0, 0.0), -Vector2(-1.0, 0.0)], [-Vector2(0.0, 1.0), -Vector2(-1.0, 1.0)], [Vector2(0.0, 1.0), Vector2(-1.0, 1.0), Vector2(-1.0, 0.0), Vector2(-1.0, -1.0), Vector2(0.0, -1.0), Vector2(1.0, -1.0), Vector2(1.0, 0.0), Vector2(1.0, 1.0)]]
 
 @onready var health = 0
 @onready var dmg_stat = 0

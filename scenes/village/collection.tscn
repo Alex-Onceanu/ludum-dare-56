@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://cwypbc1qlaq1c"]
+[gd_scene load_steps=14 format=4 uid="uid://cwypbc1qlaq1c"]
 
 [ext_resource type="Texture2D" uid="uid://b7xtv41v2owb7" path="res://assets/pixel_art/ground_tilemap.png" id="1_mb3v4"]
 [ext_resource type="Script" path="res://scenes/village/collection.gd" id="1_o708g"]
 [ext_resource type="Texture2D" uid="uid://dmovpodcvb31q" path="res://assets/pixel_art/interior.png" id="2_ax0jp"]
 [ext_resource type="FontFile" uid="uid://bbboar44j52e8" path="res://assets/HappyHalloween.ttf" id="4_g5ied"]
+[ext_resource type="Texture2D" uid="uid://b21hb8uifae7s" path="res://scenes/combat/coin.png" id="5_rs4q3"]
+[ext_resource type="FontFile" uid="uid://cx2mjbxykxqj2" path="res://HappyHalloween.ttf" id="6_xar2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_228r8"]
 texture = ExtResource("1_mb3v4")
@@ -178,6 +180,7 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wkro"]
+content_margin_left = 15.0
 bg_color = Color(0.976471, 0.45098, 0, 1)
 border_width_bottom = 5
 border_color = Color(0.321569, 0.298039, 0.258824, 1)
@@ -273,12 +276,13 @@ tile_map_data = PackedByteArray("AAARAA0AAQAEAAAAAAARAAwAAQAEAAAAAAARAAsAAQAEAAA
 tile_set = SubResource("TileSet_vxnjf")
 
 [node name="gambling" type="Button" parent="."]
-offset_left = 116.0
-offset_top = 506.0
-offset_right = 449.0
-offset_bottom = 590.0
+offset_left = 63.0
+offset_top = 498.0
+offset_right = 501.0
+offset_bottom = 582.0
 theme = SubResource("Theme_lww1l")
 text = "Buy random figurine"
+alignment = 0
 
 [node name="selected" type="Sprite2D" parent="."]
 
@@ -343,6 +347,21 @@ offset_bottom = 190.0
 theme_override_fonts/font = ExtResource("4_g5ied")
 theme_override_font_sizes/font_size = 24
 text = "current team"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 413.0
+offset_top = 528.0
+offset_right = 433.0
+offset_bottom = 548.0
+texture = ExtResource("5_rs4q3")
+
+[node name="coins" type="Label" parent="."]
+offset_left = 438.0
+offset_top = 525.0
+offset_right = 478.0
+offset_bottom = 553.0
+theme_override_fonts/font = ExtResource("6_xar2h")
+theme_override_font_sizes/font_size = 24
 
 [connection signal="item_selected" from="figurine_list" to="." method="_on_figurine_list_item_selected"]
 [connection signal="pressed" from="gambling" to="." method="_on_gambling_pressed"]
