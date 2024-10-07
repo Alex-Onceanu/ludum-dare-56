@@ -1,11 +1,11 @@
 [gd_scene load_steps=19 format=4 uid="uid://cjfttib63jxka"]
 
-[ext_resource type="Texture2D" uid="uid://b668vi83f0e8l" path="res://assets/pixel_art/ground_tilemap.png" id="1_mxpgv"]
-[ext_resource type="Texture2D" uid="uid://dnrwnpsie2re5" path="res://assets/pixel_art/witch_house.png" id="2_odi2d"]
-[ext_resource type="Texture2D" uid="uid://5hm2cseg0q01" path="res://assets/pixel_art/wood_house.png" id="3_1p164"]
-[ext_resource type="Texture2D" uid="uid://b41klbbfrw8f2" path="res://assets/pixel_art/roof.png" id="4_4f6dn"]
-[ext_resource type="Texture2D" uid="uid://cwctjh3mgvejg" path="res://assets/pixel_art/roof_witch.png" id="5_5dl2x"]
-[ext_resource type="FontFile" uid="uid://rsiuyc071mp7" path="res://assets/HappyHalloween.ttf" id="6_bcr5d"]
+[ext_resource type="Texture2D" uid="uid://b7xtv41v2owb7" path="res://assets/pixel_art/ground_tilemap.png" id="1_mxpgv"]
+[ext_resource type="Texture2D" uid="uid://0qf58blmjdf0" path="res://assets/pixel_art/witch_house.png" id="2_odi2d"]
+[ext_resource type="Texture2D" uid="uid://nl3x7it272hp" path="res://assets/pixel_art/wood_house.png" id="3_1p164"]
+[ext_resource type="Texture2D" uid="uid://bxor1m86nwwsj" path="res://assets/pixel_art/roof.png" id="4_4f6dn"]
+[ext_resource type="Texture2D" uid="uid://bt6g12jrpi3d8" path="res://assets/pixel_art/roof_witch.png" id="5_5dl2x"]
+[ext_resource type="FontFile" uid="uid://bbboar44j52e8" path="res://assets/HappyHalloween.ttf" id="6_bcr5d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_teetx"]
 texture = ExtResource("1_mxpgv")

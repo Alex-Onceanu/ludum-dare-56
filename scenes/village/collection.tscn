@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4 uid="uid://cwypbc1qlaq1c"]
 
-[ext_resource type="Texture2D" uid="uid://b668vi83f0e8l" path="res://assets/pixel_art/ground_tilemap.png" id="1_mb3v4"]
+[ext_resource type="Texture2D" uid="uid://b7xtv41v2owb7" path="res://assets/pixel_art/ground_tilemap.png" id="1_mb3v4"]
 [ext_resource type="Script" path="res://scenes/village/collection.gd" id="1_o708g"]
-[ext_resource type="Texture2D" uid="uid://ckqcioae3m1ma" path="res://assets/pixel_art/interior.png" id="2_ax0jp"]
-[ext_resource type="FontFile" uid="uid://rsiuyc071mp7" path="res://assets/HappyHalloween.ttf" id="4_g5ied"]
+[ext_resource type="Texture2D" uid="uid://dmovpodcvb31q" path="res://assets/pixel_art/interior.png" id="2_ax0jp"]
+[ext_resource type="FontFile" uid="uid://bbboar44j52e8" path="res://assets/HappyHalloween.ttf" id="4_g5ied"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_228r8"]
 texture = ExtResource("1_mb3v4")
@@ -217,9 +217,18 @@ metadata/_edit_vertical_guides_ = [282.0]
 [node name="figurine_list" type="ItemList" parent="."]
 offset_left = 572.0
 offset_top = 34.0
-offset_right = 1121.0
+offset_right = 856.0
 offset_bottom = 595.0
+max_columns = 2
+same_column_width = true
 icon_scale = 3.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 886.0
+offset_top = 143.0
+offset_right = 1136.0
+offset_bottom = 633.0
+color = Color(0.976471, 0.45098, 0, 0.14902)
 
 [node name="house" type="Node2D" parent="."]
 position = Vector2(-51, -124)
@@ -272,6 +281,68 @@ theme = SubResource("Theme_lww1l")
 text = "Buy random figurine"
 
 [node name="selected" type="Sprite2D" parent="."]
+
+[node name="exit" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 106.0
+offset_bottom = 61.0
+theme = SubResource("Theme_lww1l")
+text = "EXIT"
+
+[node name="team" type="Button" parent="."]
+offset_left = 912.0
+offset_top = 38.0
+offset_right = 1119.0
+offset_bottom = 102.0
+theme = SubResource("Theme_lww1l")
+text = "Add to team
+"
+
+[node name="team_view" type="GridContainer" parent="."]
+offset_left = 895.0
+offset_top = 204.0
+offset_right = 1100.0
+offset_bottom = 555.0
+scale = Vector2(2, 2)
+theme_override_constants/h_separation = 10
+columns = 3
+
+[node name="1" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="2" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="3" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="4" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="5" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="6" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="7" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="8" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="9" type="TextureRect" parent="team_view"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 943.0
+offset_top = 151.0
+offset_right = 1081.0
+offset_bottom = 190.0
+theme_override_fonts/font = ExtResource("4_g5ied")
+theme_override_font_sizes/font_size = 24
+text = "current team"
 
 [connection signal="item_selected" from="figurine_list" to="." method="_on_figurine_list_item_selected"]
 [connection signal="pressed" from="gambling" to="." method="_on_gambling_pressed"]

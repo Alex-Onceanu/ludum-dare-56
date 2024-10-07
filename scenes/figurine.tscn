@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl84x5d34lx6o"]
+[gd_scene load_steps=2 format=3 uid="uid://ctawjkrkajcmt"]
 
 [ext_resource type="Script" path="res://scenes/figurine.gd" id="1_hbx70"]
 

@@ -9,6 +9,7 @@ script = ExtResource("1_nqcxk")
 
 [node name="village" parent="." instance=ExtResource("2_mvive")]
 position = Vector2(-6, -15)
+metadata/_edit_group_ = true
 
 [node name="collection" parent="." instance=ExtResource("3_6q2yv")]
 visible = false
