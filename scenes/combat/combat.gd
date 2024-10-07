@@ -10,8 +10,7 @@ signal end_battle(bool)
 @onready var is_player_turn = true
 @onready var mmifs = [1150,650]
 @onready var tilemap = get_node("TileMapLayer")
-@onready var scene = get_node(".")
-@onready var origin = Vector2(scene.position.x, scene.position.y)
+@onready var origin = Vector2(position.x, position.y)
 @onready var tile_size = Vector2(32, 16)
 @onready var placing_a_piece = false
 @onready var current_piece = -1
@@ -63,7 +62,7 @@ func set_ingame_pieces(__player_pieces, __enemy_pieces):
 	player_pieces = __player_pieces
 	enemy_pieces = __enemy_pieces
 	for i in range(len(player_pieces)):
-		$list.add_item(player_pieces[i].get_node("figurine").nickname, player_pieces[i].get_node("sprite").sprite, true)
+		$list.add_item(player_pieces[i].nickname, player_pieces[i].get_node("sprite").texture, true)
 	for i in range(len(enemy_pieces)): #on suppose len(enemy_pieces) <= 8 et len(player_pieces) <= 8
 		enemy_pieces[i].position = base_change_back(Vector2(i+1,8))
 		enemy_pieces[i].get_node("sprite").visible = true

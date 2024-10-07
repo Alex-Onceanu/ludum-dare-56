@@ -48,7 +48,10 @@ func start_battle():
 		return
 	else:
 		var combat_scene = combat_blueprint.instantiate()
-		combat_scene.set_ingame_pieces(team, $tournament.enemies_per_level[$tournament.current_level])
+		var team_figurines = []
+		for i in range(len(team)):
+			team_figurines.append(possessed_figurines[team[i]])
+		combat_scene.set_ingame_pieces(team_figurines, $tournament.enemies_per_level[$tournament.current_level])
 		combat_scene.end_battle.connect(_on_combat_end_battle)
 		combat_scene.show()
 		add_child(combat_scene)
