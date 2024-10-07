@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cjfttib63jxka"]
+[gd_scene load_steps=19 format=4 uid="uid://cegd6f3fpa4v4"]
 
 [ext_resource type="Texture2D" uid="uid://b7xtv41v2owb7" path="res://assets/pixel_art/ground_tilemap.png" id="1_mxpgv"]
 [ext_resource type="Texture2D" uid="uid://0qf58blmjdf0" path="res://assets/pixel_art/witch_house.png" id="2_odi2d"]

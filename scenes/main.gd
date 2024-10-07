@@ -5,6 +5,8 @@ const team_size = 6
 @onready var team = []
 @onready var selected_scene = $village
 @onready var combat_blueprint = preload("res://scenes/combat/combat.tscn")
+@onready var team_figurines = []
+@onready var enemy_figurines = []
 
 func _on_collection_pressed() -> void:
 	$village.hide()
@@ -48,13 +50,13 @@ func start_battle():
 		return
 	else:
 		var combat_scene = combat_blueprint.instantiate()
-		var team_figurines = []
+		add_child(combat_scene)
 		for i in range(len(team)):
 			team_figurines.append(possessed_figurines[team[i]])
-		combat_scene.set_ingame_pieces(team_figurines, $tournament.enemies_per_level[$tournament.current_level])
+		enemy_figurines = $tournament.enemies_per_level[$tournament.current_level].duplicate()
+		combat_scene.set_ingame_pieces()
 		combat_scene.end_battle.connect(_on_combat_end_battle)
 		combat_scene.show()
-		add_child(combat_scene)
 		$tournament.hide()
 	
 		
