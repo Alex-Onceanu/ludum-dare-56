@@ -44,7 +44,7 @@ func _input(event):
 				if can_place_here(Vector2(int(temp.x+0.5),int(temp.y+0.5))):
 					player_pieces[current_piece].position = base_change_back(Vector2(int(temp.x+0.5),int(temp.y+0.5)))
 					player_pieces[current_piece].get_node("sprite").visible = true
-					print(str(event.position.x)+" "+str(event.position.y)+" -> "+str(temp.x)+" "+str(temp.y))
+					# print(str(event.position.x)+" "+str(event.position.y)+" -> "+str(temp.x)+" "+str(temp.y))
 
 func set_ingame_pieces(__player_pieces, __enemy_pieces):
 	player_pieces = __player_pieces
@@ -54,7 +54,7 @@ func _ready():
 	for i in range(len(player_pieces)):
 		$list.add_item(player_pieces[i].get_node("figurine").nickname, player_pieces[i].get_node("sprite").sprite, true)
 	for i in range(len(enemy_pieces)): #on suppose len(enemy_pieces) <= 8 et len(player_pieces) <= 8
-		enemy_pieces[i].position = base_change_back(Vector2(i+1,i+1))
+		enemy_pieces[i].position = base_change_back(Vector2(i+1,8))
 		enemy_pieces[i].get_node("sprite").visible = true
 		
 
@@ -107,6 +107,7 @@ func move(piece):
 func _process(_delta):
 	if Input.is_action_just_pressed("validate"):
 		placement = false
+		$list.visible = false
 	if not(placement):
 		if not(is_player_turn):
 			var done = false
