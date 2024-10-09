@@ -11,7 +11,7 @@ func _ready():
 	for i in range(2, 6):
 		get_node("levels/" + str(i)).hide()
 		
-	for level in range(3):
+	for level in range(4):
 		var tmp = []
 		for i in range(nb_enemies_per_level[level]):
 			var enemy = fig_blueprint.instantiate()

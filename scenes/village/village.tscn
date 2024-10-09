@@ -512,9 +512,9 @@ theme = SubResource("Theme_qeo2n")
 text = "Tournament"
 
 [node name="options" type="Button" parent="."]
-offset_left = 537.0
-offset_top = 285.0
-offset_right = 613.0
-offset_bottom = 315.0
+offset_left = 516.0
+offset_top = 279.0
+offset_right = 635.0
+offset_bottom = 323.0
 theme = SubResource("Theme_qeo2n")
-text = "Options"
+text = "How to play"
